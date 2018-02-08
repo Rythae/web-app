@@ -1,0 +1,70 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <div id="product-page">
+                <h1>TheShowCase!</h1>
+                <p>View our hand-picked products from all over the world</p>
+                <p>
+                    <a  class="btn btn-lg btn-primary" href="/products/new">Add New Products</a>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <div class="row text-center"> 
+        <% products.forEach(function(product){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= product.image %>">
+                    <div class="caption">
+                        <h4><%= product.name %></h4>
+                    </div>
+                        <P>
+                            <a href="/products/<%= product._id %>" class="btn btn-sm btn-primary">More Info</a>
+                        </p>
+                </div>
+            </div>
+            
+       <% }); %>
+    </div>
+    <p><a href="/" class="btn btn-xs btn-danger">Go Back</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% include ../partials/footer %>
